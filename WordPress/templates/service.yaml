@@ -1,19 +1,14 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ template "chart.fullname" . }}
+  name: wordpress
   labels:
-    app: {{ template "chart.name" . }}
-    chart: {{ template "chart.chart" . }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
+    app: wordpress
 spec:
-  type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      targetPort: {{ .Values.service.targetPort }}
-      protocol: TCP
-      name: http
+    - port: 80
+      nodePort: 30001
   selector:
-    app: {{ template "chart.name" . }}
-    release: {{ .Release.Name }}
+    app: wordpress
+    tier: frontend
+  type: NodePort

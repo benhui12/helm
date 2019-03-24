@@ -1,0 +1,14 @@
+pvc:
+  storageClassName: cvo-single
+
+mysql:
+  pvc:
+    storageClassName: cvo-single
+  pv:
+    #example: /trident_default_mysql_pv_claim_cb63e_copy
+    path: /trident_default_mysql_pv_claim_cb63e_copy
+    #example: 172.16.0.7
+    server: 172.16.0.7
+
+
+

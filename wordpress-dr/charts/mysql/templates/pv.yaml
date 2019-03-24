@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: default-mysql-pv-claim-dr
+spec:
+  capacity:
+    storage: 20Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: {{ .Values.pvc.storageClassName }}
+  nfs:
+    path: {{ .Values.pv.path }}
+    server: {{ .Values.pv.server }}

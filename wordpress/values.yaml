@@ -1,2 +1,6 @@
 pvc:
-  storageClassName: cvo-single
+  storageClassName: standard
+
+mysql:
+  pvc:
+    storageClassName: standard

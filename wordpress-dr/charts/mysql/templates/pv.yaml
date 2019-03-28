@@ -10,6 +10,7 @@ spec:
     - ReadWriteOnce
   claimRef:
     name: mysql-pv-claim
+    namespace: wordpress-dr
   persistentVolumeReclaimPolicy: Retain
   storageClassName: {{ .Values.pvc.storageClassName }}
   nfs:

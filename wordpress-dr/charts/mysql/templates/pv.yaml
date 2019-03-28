@@ -8,6 +8,8 @@ spec:
   volumeMode: Filesystem
   accessModes:
     - ReadWriteOnce
+  claimRef:
+    name: mysql-pv-claim
   persistentVolumeReclaimPolicy: Retain
   storageClassName: {{ .Values.pvc.storageClassName }}
   nfs:

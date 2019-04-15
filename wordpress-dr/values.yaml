@@ -1,9 +1,9 @@
 pvc:
-  storageClassName: cvo-single
+  storageClassName: netapp-file
 
 mysql:
   pvc:
-    storageClassName: cvo-single
+    storageClassName: netapp-file
   pv:
     #example: /trident_default_mysql_pv_claim_cb63e_copy
     path: /trident_default_mysql_pv_claim_cb63e_copy

@@ -1,6 +1,6 @@
 pvc:
-  storageClassName: cvo-single
+  storageClassName: netapp-file
 
 mysql:
   pvc:
-    storageClassName: cvo-single
+    storageClassName: netapp-file
